@@ -1,0 +1,46 @@
+@use '../abstract/mixins';
+@use '../abstract/root';
+@use '../abstract/variaveis';
+
+#home {
+    max-width: 1040px;
+    @include mixins.margem-central(80%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .textos-home {
+        max-width: 464px;
+        h1 {
+            font-size: 42px;
+            color: variaveis.$cor-primaria;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            font-family: variaveis.$ft-titulos;
+            span {
+                color: variaveis.$cor-secundaria;
+            }
+        }
+    }
+    .img-home {
+        max-width: 474px;
+        img {
+            width: 70%;
+        }
+    }
+
+}
+.btn-main {
+    background: variaveis.$cor-default;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 15px;
+    font-family: variaveis.$ft-textos;
+    font-size: 15px;
+    cursor: pointer;
+    &:hover {
+        transition: all 0.2s;
+        background: variaveis.$cor-secundaria;
+        color: #fff;
+    }
+}
